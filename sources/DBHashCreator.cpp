@@ -68,15 +68,14 @@ void DBHashCreator::getHash
   std::string value, value1;
     for (auto it = strContainer.begin(); it != strContainer.end(); ++it) {
         std::string hash = picosha2::hash256_hex_string(it->first + it->second);
-        //logs::logInfo(it->first, hash);
         rocksdb::Status status = _new_db->Put(rocksdb::WriteOptions(),
                                           family,
                                           it->first,
                                           hash);
       status = _new_db->Get(rocksdb::ReadOptions(), it->first, &value);
       status = _db->Get(rocksdb::ReadOptions(), it->first, &value1);
-      std::cout << "key: " << it->first << " hash: " << value << " , where value was " << value1 << std::endl;
       if(!status.ok()) std::cerr << status.ToString() << std::endl;
+      logs::logInfo(it->first, value, value1);
     }
 }
 

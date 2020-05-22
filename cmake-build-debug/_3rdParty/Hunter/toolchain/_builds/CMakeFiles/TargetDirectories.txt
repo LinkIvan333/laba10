@@ -1,2 +1,2 @@
-/home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles/rebuild_cache.dir
-/home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles/edit_cache.dir
+/home/ivan/Git/lab10/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles/rebuild_cache.dir
+/home/ivan/Git/lab10/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles/edit_cache.dir

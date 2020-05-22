@@ -2496,7 +2496,7 @@ CMakeFiles/template.dir/sources/DBHashCreator.cpp.o
  /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/rocksdb/write_batch.h
  /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/rocksdb/write_batch_base.h
  /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/rocksdb/write_buffer_manager.h
- /home/ivan/Git/lab-10-kv-storage-master/sources/DBHashCreator.cpp
+ /home/ivan/Git/lab10/sources/DBHashCreator.cpp
 CMakeFiles/template.dir/sources/logs.cpp.o
  ../include/DBHashCreator.hpp
  ../include/constants.hpp
@@ -4992,4 +4992,4 @@ CMakeFiles/template.dir/sources/logs.cpp.o
  /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/rocksdb/write_batch.h
  /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/rocksdb/write_batch_base.h
  /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/rocksdb/write_buffer_manager.h
- /home/ivan/Git/lab-10-kv-storage-master/sources/logs.cpp
+ /home/ivan/Git/lab10/sources/logs.cpp

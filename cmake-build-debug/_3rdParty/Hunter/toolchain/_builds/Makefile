@@ -48,10 +48,10 @@ RM = /home/ivan/clion-2020.1.1/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/_3rdParty/Hunter/toolchain
+CMAKE_SOURCE_DIR = /home/ivan/Git/lab10/cmake-build-debug/_3rdParty/Hunter/toolchain
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds
+CMAKE_BINARY_DIR = /home/ivan/Git/lab10/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles /home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Git/lab10/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles /home/ivan/Git/lab10/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Git/lab10/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

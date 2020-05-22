@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ivan/Git/lab-10-kv-storage-master/sources/DBHashCreator.cpp" "/home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/CMakeFiles/template.dir/sources/DBHashCreator.cpp.o"
-  "/home/ivan/Git/lab-10-kv-storage-master/sources/logs.cpp" "/home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/CMakeFiles/template.dir/sources/logs.cpp.o"
+  "/home/ivan/Git/lab10/sources/DBHashCreator.cpp" "/home/ivan/Git/lab10/cmake-build-debug/CMakeFiles/template.dir/sources/DBHashCreator.cpp.o"
+  "/home/ivan/Git/lab10/sources/logs.cpp" "/home/ivan/Git/lab10/cmake-build-debug/CMakeFiles/template.dir/sources/logs.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -43,10 +43,10 @@ RM = /home/ivan/clion-2020.1.1/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Git/lab-10-kv-storage-master
+CMAKE_SOURCE_DIR = /home/ivan/Git/lab10
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ivan/Git/lab10/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/template.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/template.dir/flags.make
 
 CMakeFiles/template.dir/sources/DBHashCreator.cpp.o: CMakeFiles/template.dir/flags.make
 CMakeFiles/template.dir/sources/DBHashCreator.cpp.o: ../sources/DBHashCreator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/template.dir/sources/DBHashCreator.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/template.dir/sources/DBHashCreator.cpp.o -c /home/ivan/Git/lab-10-kv-storage-master/sources/DBHashCreator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Git/lab10/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/template.dir/sources/DBHashCreator.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/template.dir/sources/DBHashCreator.cpp.o -c /home/ivan/Git/lab10/sources/DBHashCreator.cpp
 
 CMakeFiles/template.dir/sources/DBHashCreator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/template.dir/sources/DBHashCreator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Git/lab-10-kv-storage-master/sources/DBHashCreator.cpp > CMakeFiles/template.dir/sources/DBHashCreator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Git/lab10/sources/DBHashCreator.cpp > CMakeFiles/template.dir/sources/DBHashCreator.cpp.i
 
 CMakeFiles/template.dir/sources/DBHashCreator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/template.dir/sources/DBHashCreator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Git/lab-10-kv-storage-master/sources/DBHashCreator.cpp -o CMakeFiles/template.dir/sources/DBHashCreator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Git/lab10/sources/DBHashCreator.cpp -o CMakeFiles/template.dir/sources/DBHashCreator.cpp.s
 
 CMakeFiles/template.dir/sources/logs.cpp.o: CMakeFiles/template.dir/flags.make
 CMakeFiles/template.dir/sources/logs.cpp.o: ../sources/logs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/template.dir/sources/logs.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/template.dir/sources/logs.cpp.o -c /home/ivan/Git/lab-10-kv-storage-master/sources/logs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Git/lab10/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/template.dir/sources/logs.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/template.dir/sources/logs.cpp.o -c /home/ivan/Git/lab10/sources/logs.cpp
 
 CMakeFiles/template.dir/sources/logs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/template.dir/sources/logs.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Git/lab-10-kv-storage-master/sources/logs.cpp > CMakeFiles/template.dir/sources/logs.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Git/lab10/sources/logs.cpp > CMakeFiles/template.dir/sources/logs.cpp.i
 
 CMakeFiles/template.dir/sources/logs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/template.dir/sources/logs.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Git/lab-10-kv-storage-master/sources/logs.cpp -o CMakeFiles/template.dir/sources/logs.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Git/lab10/sources/logs.cpp -o CMakeFiles/template.dir/sources/logs.cpp.s
 
 # Object files for target template
 template_OBJECTS = \
@@ -95,7 +95,7 @@ libtemplated.a: CMakeFiles/template.dir/sources/DBHashCreator.cpp.o
 libtemplated.a: CMakeFiles/template.dir/sources/logs.cpp.o
 libtemplated.a: CMakeFiles/template.dir/build.make
 libtemplated.a: CMakeFiles/template.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libtemplated.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/Git/lab10/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libtemplated.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/template.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/template.dir/link.txt --verbose=$(VERBOSE)
 
@@ -109,6 +109,6 @@ CMakeFiles/template.dir/clean:
 .PHONY : CMakeFiles/template.dir/clean
 
 CMakeFiles/template.dir/depend:
-	cd /home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/Git/lab-10-kv-storage-master /home/ivan/Git/lab-10-kv-storage-master /home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug /home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug /home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug/CMakeFiles/template.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ivan/Git/lab10/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/Git/lab10 /home/ivan/Git/lab10 /home/ivan/Git/lab10/cmake-build-debug /home/ivan/Git/lab10/cmake-build-debug /home/ivan/Git/lab10/cmake-build-debug/CMakeFiles/template.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/template.dir/depend
 

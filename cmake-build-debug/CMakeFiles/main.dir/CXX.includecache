@@ -29762,7 +29762,7 @@ cstddef
 rocksdb/cache.h
 /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/rocksdb/rocksdb/cache.h
 
-/home/ivan/Git/lab-10-kv-storage-master/sources/main.cpp
+/home/ivan/Git/lab10/sources/main.cpp
 DBHashCreator.hpp
 -
 constants.hpp
@@ -29776,9 +29776,9 @@ iostream
 string
 -
 rocksdb/db.h
-/home/ivan/Git/lab-10-kv-storage-master/sources/rocksdb/db.h
+/home/ivan/Git/lab10/sources/rocksdb/db.h
 rocksdb/options.h
-/home/ivan/Git/lab-10-kv-storage-master/sources/rocksdb/options.h
+/home/ivan/Git/lab10/sources/rocksdb/options.h
 rocksdb/slice.h
-/home/ivan/Git/lab-10-kv-storage-master/sources/rocksdb/slice.h
+/home/ivan/Git/lab10/sources/rocksdb/slice.h
 

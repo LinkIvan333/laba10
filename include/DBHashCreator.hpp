@@ -30,23 +30,15 @@ using FHandlerContainer =
 using StrContainer = boost::unordered_map<std::string, std::string>;
 namespace po = boost::program_options;
 
-const std::size_t DEFAULT_THREAD_HASH = boost::thread::hardware_concurrency();
-const std::string DEFAULT_LOG_LEVEL = "error";
-const std::string DEFAULT_OUTPUT_PATH = "/home/ivan/DB/new_db";
-const std::string DEFAULT_INPUT_PATH = "/home/ivan/DB/db";
-
 class DBHashCreator {
 public:
-    explicit DBHashCreator(std::string path) : _path(path) {
-       new_options.create_if_missing = true;
-       options.create_if_missing = true;
-    }
 
-    DBHashCreator(std::string path,
+    DBHashCreator(std::string new_path, std::string path,
             std::size_t threadCount,
             std::string logLVL) :
-            _path(path),
-            _logLVL(logLVL),  _threadCountHash(threadCount){
+            _new_path(std::move(new_path)),
+            _path(std::move(path)),
+            _logLVL(std::move(logLVL)),  _threadCountHash(threadCount){
       new_options.create_if_missing = true;
       options.create_if_missing = true;
     }
@@ -66,11 +58,11 @@ public:
 private:
     rocksdb::Options new_options;
     rocksdb::DBOptions options;
-    std::string _new_path = DEFAULT_OUTPUT_PATH;
-    std::string _path = DEFAULT_INPUT_PATH;
-    std::string _logLVL = DEFAULT_LOG_LEVEL;
+    std::string _new_path;
+    std::string _path ;
+    std::string _logLVL;
     std::unique_ptr<rocksdb::DB> _db, _new_db;
-    std::size_t _threadCountHash = DEFAULT_THREAD_HASH;
+    std::size_t _threadCountHash;
     std::mutex _mutex;
 };
 #endif // INCLUDE_MAIN_HPP_

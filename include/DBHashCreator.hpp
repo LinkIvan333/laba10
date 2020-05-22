@@ -1,7 +1,6 @@
-// Copyright 2018 Your Name <your_email>
+// Copyright 2020 <LinkIvan333>
 
-#ifndef INCLUDE_MAIN_HPP_
-#define INCLUDE_MAIN_HPP_
+#pragma once
 #include <iostream>
 #include <string>
 #include <random>
@@ -32,7 +31,6 @@ namespace po = boost::program_options;
 
 class DBHashCreator {
 public:
-
     DBHashCreator(std::string new_path, std::string path,
             std::size_t threadCount,
             std::string logLVL) :
@@ -65,4 +63,4 @@ private:
     std::size_t _threadCountHash;
     std::mutex _mutex;
 };
-#endif // INCLUDE_MAIN_HPP_
+

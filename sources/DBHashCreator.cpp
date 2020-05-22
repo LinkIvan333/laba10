@@ -1,6 +1,6 @@
-// Copyright 2018 Your Name <your_email>
+// Copyright 2020 <LinkIvan333>
+
 #include <DBHashCreator.hpp>
-#include <constants.hpp>
 #include <logs.hpp>
 
 FHandlerContainer DBHashCreator::openDB
@@ -40,7 +40,9 @@ FDescriptorContainer DBHashCreator::getFamilyDescriptors() {
             rocksdb::DB::ListColumnFamilies(options,
                                             _path,
                                             &family);
-  if (!status.ok()) std::cerr << status.ToString() << std::endl;
+  if (!status.ok()) {
+      std::cerr << status.ToString() << std::endl;
+    }
     for (const std::string &familyName : family) {
         descriptors.emplace_back(familyName,
                                  rocksdb::ColumnFamilyOptions());

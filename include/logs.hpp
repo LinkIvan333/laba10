@@ -1,5 +1,6 @@
-#pragma once
+// Copyright 2020 <LinkIvan333>
 
+#pragma once
 #include <iostream>
 #include <boost/log/trivial.hpp>
 #include <boost/log/utility/setup/file.hpp>
@@ -10,6 +11,7 @@
 #include <boost/log/utility/setup/console.hpp>
 #include <boost/log/utility/setup/common_attributes.hpp>
 #include <boost/log/sinks.hpp>
+#include <string>
 
 namespace logs{
     void logInFile();

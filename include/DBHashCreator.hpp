@@ -38,6 +38,7 @@ public:
             _path(path),
             _logLVL(logLVL),  _threadCountHash(threadCount){
       options.create_if_missing = true;
+      startThreads();
     }
 
     FDescriptorContainer getFamilyDescriptors();

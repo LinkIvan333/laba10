@@ -49,6 +49,5 @@ int main(int argc, char **argv) {
     logs::logInFile();
     DBHashCreator db(pathToNewFile, pathToFile,
                      threadCount, log_lvls.at(logLVL));
-    db.startThreads();
     return 0;
 }

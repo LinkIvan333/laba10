@@ -1,0 +1,22 @@
+/home/ivan/clion-2020.1.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/ivan/Git/lab-10-kv-storage-master
+-- [hunter] Calculating Toolchain-SHA1
+-- [hunter] Calculating Config-SHA1
+-- [hunter] HUNTER_ROOT: /home/ivan/.hunter
+-- [hunter] [ Hunter-ID: 9a3594a | Toolchain-ID: 9b2c9d4 | Config-ID: 48401e9 ]
+-- [hunter] GTEST_ROOT: /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install (ver.: 1.8.0-hunter-p11)
+-- [hunter] BOOST_ROOT: /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install (ver.: 1.70.0-p0)
+-- [hunter] BOOST_ROOT: /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install (ver.: 1.70.0-p0)
+-- [hunter] BOOST_ROOT: /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install (ver.: 1.70.0-p0)
+-- [hunter] BOOST_ROOT: /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install (ver.: 1.70.0-p0)
+-- [hunter] BOOST_ROOT: /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install (ver.: 1.70.0-p0)
+-- Boost version: 1.70.0
+-- Found the following Boost libraries:
+--   program_options
+--   thread
+--   log
+--   log_setup
+--   filesystem
+-- [hunter] ROCKSDB_ROOT: /home/ivan/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install (ver.: 5.14.2)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ivan/Git/lab-10-kv-storage-master/cmake-build-debug

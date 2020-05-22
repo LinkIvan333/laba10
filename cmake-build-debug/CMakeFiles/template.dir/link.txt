@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtemplated.a  CMakeFiles/template.dir/sources/DBHashCreator.cpp.o CMakeFiles/template.dir/sources/logs.cpp.o
+/usr/bin/ranlib libtemplated.a

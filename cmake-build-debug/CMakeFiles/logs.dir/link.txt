@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblogsd.a  CMakeFiles/logs.dir/sources/logs.cpp.o CMakeFiles/logs.dir/sources/main.cpp.o
+/usr/bin/ranlib liblogsd.a

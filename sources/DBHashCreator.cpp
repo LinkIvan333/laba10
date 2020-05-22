@@ -104,17 +104,13 @@ void DBHashCreator::startThreads() {
         StrContainerList.push_back(
                 getStrs(family.get()));
     }
-
-    std::vector <std::thread> threads;
-    threads.reserve(_threadCountHash);
+    
+    boost::thread_group threads;
     for (size_t i = 0; i < _threadCountHash; ++i) {
-        threads.emplace_back(std::thread
-                                     (&DBHashCreator::startHash,
-                                      this,
-                                      &handlers,
-                                      &StrContainerList));
+      threads.add_thread(new boost::thread(&DBHashCreator::startHash,
+                            this,
+                            &handlers,
+                            &StrContainerList));
     }
-    for (auto &th : threads) {
-        th.join();
-    }
+    threads.join_all();
 }

@@ -57,7 +57,7 @@ private:
     rocksdb::Options new_options;
     rocksdb::DBOptions options;
     std::string _new_path;
-    std::string _path ;
+    std::string _path;
     std::string _logLVL;
     std::unique_ptr<rocksdb::DB> _db, _new_db;
     std::size_t _threadCountHash;

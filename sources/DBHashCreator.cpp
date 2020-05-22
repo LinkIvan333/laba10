@@ -95,12 +95,12 @@ void DBHashCreator::startHash
 }
 
 void DBHashCreator::startThreads() {
-    auto deskriptors = getFamilyDescriptors();
-    auto handlers = openDB(deskriptors);
+    auto descriptors = getFamilyDescriptors();
+    auto handlers = openDB(descriptors);
 
     std::list <StrContainer> StrContainerList;
 
-    for (auto &family : handlers) {
+    for (const auto &family : handlers) {
         StrContainerList.push_back(
                 getStrs(family.get()));
     }

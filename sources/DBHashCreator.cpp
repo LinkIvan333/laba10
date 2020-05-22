@@ -104,7 +104,6 @@ void DBHashCreator::startThreads() {
         StrContainerList.push_back(
                 getStrs(family.get()));
     }
-    
     boost::thread_group threads;
     for (size_t i = 0; i < _threadCountHash; ++i) {
       threads.add_thread(new boost::thread(&DBHashCreator::startHash,

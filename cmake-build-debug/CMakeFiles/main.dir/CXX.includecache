@@ -45,6 +45,8 @@ constants.hpp
 -
 
 ../include/constants.hpp
+map
+-
 
 ../include/logs.hpp
 iostream
@@ -66,6 +68,8 @@ boost/log/utility/setup/console.hpp
 boost/log/utility/setup/common_attributes.hpp
 -
 boost/log/sinks.hpp
+-
+string
 -
 
 ../include/picosha2.hpp
@@ -29769,16 +29773,4 @@ constants.hpp
 -
 logs.hpp
 -
-cstdio
--
-iostream
--
-string
--
-rocksdb/db.h
-/home/ivan/Git/lab10/sources/rocksdb/db.h
-rocksdb/options.h
-/home/ivan/Git/lab10/sources/rocksdb/options.h
-rocksdb/slice.h
-/home/ivan/Git/lab10/sources/rocksdb/slice.h
 

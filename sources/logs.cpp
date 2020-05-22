@@ -2,6 +2,7 @@
 
 #include <DBHashCreator.hpp>
 #include <logs.hpp>
+#include <constants.hpp>
 
 namespace logging = boost::log;
 namespace src = boost::log::sources;
@@ -37,10 +38,18 @@ void logs::logInFile() {
 
 
 void logs::logInfo(const std::string &key, const std::string &hash,
-                   const std::string &value) {
-    BOOST_LOG_TRIVIAL(info) << "Key: " << key << " hash: " <<
-      hash << " , where value was " << value << std::endl;
+                   const std::string &value, const int &lvl) {
+    switch(lvl){
+      case 0:
+        BOOST_LOG_TRIVIAL(info) << "Key: " << key << " hash: " << hash
+                            << " , where value was " << value << std::endl;
+      break;
+      case 1:
+        BOOST_LOG_TRIVIAL(warning) << "Key: " << key << " hash: " << hash
+                            << " , where value was " << value << std::endl;
+      break;
+      case 2:
+        BOOST_LOG_TRIVIAL(error) << "Key: " << key << " hash: " << hash
+                            << " , where value was " << value << std::endl;
+  }
 }
-
-
-

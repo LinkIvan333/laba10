@@ -18,12 +18,9 @@ FHandlerContainer DBHashCreator::openDB
                     &newHandles,
                     &dbStrPtr);
     status = rocksdb::DB::Open(
-        new_options,
+        options,
         _new_path,
         &new_dbStrPtr);
-    status = dbStrPtr->Put(rocksdb::WriteOptions(), "key1", "value1");
-    status = dbStrPtr->Put(rocksdb::WriteOptions(), "key_ds", "value2");
-    status = dbStrPtr->Put(rocksdb::WriteOptions(), "key_tr", "value3");
     if (!status.ok()) std::cerr << status.ToString() << std::endl;
     _db.reset(dbStrPtr);
     _new_db.reset(new_dbStrPtr);
@@ -64,17 +61,17 @@ StrContainer DBHashCreator::getStrs(rocksdb::ColumnFamilyHandle *family) {
 
 void DBHashCreator::getHash
         (rocksdb::ColumnFamilyHandle *family, StrContainer strContainer) {
-  std::string value, value1;
+    std::string new_value, value;
     for (auto it = strContainer.begin(); it != strContainer.end(); ++it) {
         std::string hash = picosha2::hash256_hex_string(it->first + it->second);
         rocksdb::Status status = _new_db->Put(rocksdb::WriteOptions(),
                                           family,
                                           it->first,
                                           hash);
-      status = _new_db->Get(rocksdb::ReadOptions(), it->first, &value);
-      status = _db->Get(rocksdb::ReadOptions(), it->first, &value1);
+      status = _new_db->Get(rocksdb::ReadOptions(), it->first, &new_value);
+      status = _db->Get(rocksdb::ReadOptions(), it->first, &value);
       if (!status.ok()) std::cerr << status.ToString() << std::endl;
-      logs::logInfo(it->first, value, value1);
+      logs::logInfo(it->first, new_value, value, _logLVL);
     }
 }
 

@@ -31,13 +31,12 @@ namespace po = boost::program_options;
 
 class DBHashCreator {
 public:
-    DBHashCreator(std::string new_path, std::string path,
-            std::size_t threadCount,
-            std::string logLVL) :
-            _new_path(std::move(new_path)),
-            _path(std::move(path)),
-            _logLVL(std::move(logLVL)),  _threadCountHash(threadCount){
-      new_options.create_if_missing = true;
+    DBHashCreator(std::string &new_path, std::string &path,
+            std::size_t &threadCount,
+            int logLVL) :
+            _new_path(new_path),
+            _path(path),
+            _logLVL(logLVL),  _threadCountHash(threadCount){
       options.create_if_missing = true;
     }
 
@@ -54,13 +53,12 @@ public:
     void startThreads();
 
 private:
-    rocksdb::Options new_options;
-    rocksdb::DBOptions options;
+    rocksdb::Options options;
     std::string _new_path;
     std::string _path;
-    std::string _logLVL;
+    int _logLVL;
     std::unique_ptr<rocksdb::DB> _db, _new_db;
     std::size_t _threadCountHash;
-    std::mutex _mutex;
+    std::recursive_mutex _mutex;
 };
 

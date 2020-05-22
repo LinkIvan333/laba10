@@ -62,16 +62,16 @@ StrContainer DBHashCreator::getStrs(rocksdb::ColumnFamilyHandle *family) {
 void DBHashCreator::getHash
         (rocksdb::ColumnFamilyHandle *family, StrContainer strContainer) {
     std::string new_value, value;
-    for (auto it = strContainer.begin(); it != strContainer.end(); ++it) {
-        std::string hash = picosha2::hash256_hex_string(it->first + it->second);
+    for (const auto & it : strContainer) {
+        std::string hash = picosha2::hash256_hex_string(it.first + it.second);
         rocksdb::Status status = _new_db->Put(rocksdb::WriteOptions(),
                                           family,
-                                          it->first,
+                                          it.first,
                                           hash);
-      status = _new_db->Get(rocksdb::ReadOptions(), it->first, &new_value);
-      status = _db->Get(rocksdb::ReadOptions(), it->first, &value);
+      status = _new_db->Get(rocksdb::ReadOptions(), it.first, &new_value);
+      status = _db->Get(rocksdb::ReadOptions(), it.first, &value);
       if (!status.ok()) std::cerr << status.ToString() << std::endl;
-      logs::logInfo(it->first, new_value, value, _logLVL);
+      logs::logInfo(it.first, new_value, value, _logLVL);
     }
 }
 

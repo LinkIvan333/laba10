@@ -39,7 +39,7 @@ void logs::logInFile() {
 
 void logs::logInfo(const std::string &key, const std::string &hash,
                    const std::string &value, const int &lvl) {
-    switch(lvl){
+    switch (lvl){
       case 0:
         BOOST_LOG_TRIVIAL(info) << "Key: " << key << " hash: " << hash
                             << " , where value was " << value << std::endl;

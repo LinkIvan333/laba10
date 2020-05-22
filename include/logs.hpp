@@ -13,5 +13,6 @@
 
 namespace logs{
     void logInFile();
-    void logInfo(const std::string &key, const std::string &hash, const std::string &value);
+    void logInfo(const std::string &key, const std::string &hash,
+                 const std::string &value);
 }

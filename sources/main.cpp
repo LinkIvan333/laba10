@@ -11,13 +11,19 @@ int main(int argc, char **argv) {
     po::options_description desc("short description");
     desc.add_options()
             ("help,h", "0 помощи")
-            ("log_level", po::value<std::string>(&logLVL)->default_value(DEFAULT_LOG_LEVEL),
+            ("log_level",
+             po::value<std::string>(&logLVL)->default_value(DEFAULT_LOG_LEVEL),
              "level logging")
-            ("thread_count", po::value<size_t>(&threadCount)->default_value(DEFAULT_THREAD_HASH),
+            ("thread_count",
+                 po::value<size_t>(&threadCount)->
+                     default_value(DEFAULT_THREAD_HASH),
              "count of threads")
-            ("output", po::value<std::string>(&pathToNewFile)->default_value(DEFAULT_OUTPUT_PATH),
+            ("output",
+                 po::value<std::string>(&pathToNewFile)->
+                     default_value(DEFAULT_OUTPUT_PATH),
              "path result")
-        ("input", po::value<std::string>(&pathToFile), "input path");
+        ("input",
+                 po::value<std::string>(&pathToFile), "input path");
 
     po::variables_map vm;
     try {

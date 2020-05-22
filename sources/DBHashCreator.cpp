@@ -24,26 +24,23 @@ FHandlerContainer DBHashCreator::openDB
     status = dbStrPtr->Put(rocksdb::WriteOptions(), "key1", "value1");
     status = dbStrPtr->Put(rocksdb::WriteOptions(), "key_ds", "value2");
     status = dbStrPtr->Put(rocksdb::WriteOptions(), "key_tr", "value3");
-    if(!status.ok()) std::cerr << status.ToString() << std::endl;
+    if (!status.ok()) std::cerr << status.ToString() << std::endl;
     _db.reset(dbStrPtr);
     _new_db.reset(new_dbStrPtr);
     for (rocksdb::ColumnFamilyHandle *ptr : newHandles) {
         handlers.emplace_back(ptr);
     }
-
     return handlers;
 }
 
 FDescriptorContainer DBHashCreator::getFamilyDescriptors() {
-
     std::vector <std::string> family;
     FDescriptorContainer descriptors;
     rocksdb::Status status =
             rocksdb::DB::ListColumnFamilies(options,
                                             _path,
                                             &family);
-  if(!status.ok()) std::cerr << status.ToString() << std::endl;
-
+  if (!status.ok()) std::cerr << status.ToString() << std::endl;
     for (const std::string &familyName : family) {
         descriptors.emplace_back(familyName,
                                  rocksdb::ColumnFamilyOptions());
@@ -74,7 +71,7 @@ void DBHashCreator::getHash
                                           hash);
       status = _new_db->Get(rocksdb::ReadOptions(), it->first, &value);
       status = _db->Get(rocksdb::ReadOptions(), it->first, &value1);
-      if(!status.ok()) std::cerr << status.ToString() << std::endl;
+      if (!status.ok()) std::cerr << status.ToString() << std::endl;
       logs::logInfo(it->first, value, value1);
     }
 }
